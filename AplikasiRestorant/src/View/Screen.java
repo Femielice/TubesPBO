@@ -75,6 +75,14 @@ public class Screen extends JFrame {
         JButton manager;
         manager = new JButton("Manager");
         manager.setBounds(179, 200, 100, 30);
+        manager.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.setVisible(false);
+                new screenManager();
+            }
+            
+        });
         JPanel managerpanel = new JPanel();
         panel.add(managerpanel);
         frame.add(manager);
@@ -82,7 +90,16 @@ public class Screen extends JFrame {
         JButton kitchen;
         kitchen = new JButton("Kitchen");
         kitchen.setBounds(179, 250, 100, 30);
+        kitchen.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.setVisible(false);
+                new screenKitchen();
+            }    
+        });
         frame.add(kitchen);
+        JPanel Kitchen = new JPanel();
+        panel.add(Kitchen);
     }
     
         
