@@ -10,5 +10,5 @@ package Controller;
  * @author A442UF
  */
 public enum StatusEnum {
-    CUSTOMER, CASHIER, MANAGER; 
+    CASHIER, MANAGER; 
 }
