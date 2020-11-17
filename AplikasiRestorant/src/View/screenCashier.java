@@ -5,6 +5,7 @@
  */
 package View;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -33,9 +34,35 @@ public class screenCashier {
         JPanel labell = new JPanel();
         panel.add(labell);
         
+        JButton transaksi;
+        transaksi = new JButton("Transaksi");
+        transaksi.setBounds(150, 100, 170, 30);
+        transaksi.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.setVisible(false);
+                new screenTransaksi();
+            }  
+        });
+        frame.add(transaksi);
+        JPanel Transaksi = new JPanel();
+        panel.add(Transaksi);
+        
+        JButton tempatduduk;
+        tempatduduk = new JButton("Input Tempat Duduk");
+        tempatduduk.setBounds(150, 150, 170, 30);
+        tempatduduk.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.setVisible(false);
+                new screenInputTempat();
+            } 
+        });
+        frame.add(tempatduduk);
+        
         JButton managemenstock;
         managemenstock = new JButton("Management Stock");
-        managemenstock.setBounds(150, 100, 170, 30);
+        managemenstock.setBounds(150, 200, 170, 30);
         managemenstock.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -61,7 +88,6 @@ public class screenCashier {
                 frame.setVisible(false);
                 new Screen();
             }
-            
         });
         frame.add(exit);
    
