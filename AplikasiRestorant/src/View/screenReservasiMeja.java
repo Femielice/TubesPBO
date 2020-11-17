@@ -53,16 +53,16 @@ public class screenReservasiMeja {
         fieldNo_Telp = new JTextField();
         fieldNo_Telp.setBounds(210, 200, 157, 30);
         frame.add(fieldNo_Telp);
-        
-        JLabel No_Meja;
-        No_Meja = new JLabel("No Meja");
-        No_Meja.setBounds(120, 250, 100, 30);
-        frame.add(No_Meja);
-        JTextField fieldNo_Meja;
-        fieldNo_Meja = new JTextField();
-        fieldNo_Meja.setBounds(210, 250, 157, 30);
-        frame.add(fieldNo_Meja);
      
+        JLabel Tanggal;
+        Tanggal = new JLabel("Tanggal");
+        Tanggal.setBounds(120, 250, 100, 30);
+        frame.add(Tanggal);
+        JTextField fieldTanggal;
+        fieldTanggal = new JTextField();
+        fieldTanggal.setBounds(210, 250, 157, 30);
+        frame.add(fieldTanggal);
+        
         JButton save;
         save = new JButton("Save");
         save.setBounds(355, 500, 70, 30);
