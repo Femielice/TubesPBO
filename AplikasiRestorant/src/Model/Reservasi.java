@@ -16,17 +16,19 @@ public class Reservasi extends Meja{
     private String Nama;
     int JumlahOrang;
     private String No_Telp;
+    private String Tanggal_Reservasi;
    
     public Reservasi() {
         
     }
 
-    public Reservasi(String ID, String Nama, int JumlahOrang, String No_Telp, String ID_Meja, String Jenis_Meja, int No_Meja) {
+    public Reservasi(String ID, String Nama, int JumlahOrang, String No_Telp, String ID_Meja, String Jenis_Meja, int No_Meja,String Tanggal_Reservasi) {
         super(ID_Meja, Jenis_Meja, No_Meja);
         this.ID = ID;
         this.Nama = Nama;
         this.JumlahOrang = JumlahOrang;
         this.No_Telp = No_Telp;
+        this.Tanggal_Reservasi = Tanggal_Reservasi;
     }
 
     public String getID() {
@@ -60,8 +62,12 @@ public class Reservasi extends Meja{
     public void setNo_Telp(String No_Telp) {
         this.No_Telp = No_Telp;
     }
-    
-    
+    public void getTanggal_Reservasi(){
+        this.Tanggal_Reservasi = Tanggal_Reservasi;
+    }
+    public String setTanggal_Reservasi(String Tanggal_Reservasi){
+        return Tanggal_Reservasi;
+    }
     
     
     
