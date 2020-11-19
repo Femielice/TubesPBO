@@ -93,4 +93,77 @@ public class Controller {
         }
         return(false);
     }
+     public static boolean Transaksi( double totalHarga, String tanggalPesanan, String metodePembayaran, double Diskon, int ID_Order, int Jumlah_Makanan, String ID_Makanan, String Nama, int Jumlah, double Harga){
+        conn.connect();
+        String query = "INSERT INTO Transaksi VALUES (?,?,?,?,?,?,?,?,?,?)";
+        try {
+            PreparedStatement stmt = conn.con.prepareStatement(query);
+            stmt.setInt(1, ID_Order);
+            stmt.setString(2, tanggalPesanan);
+            stmt.setString(3, Nama);
+            stmt.setString(4, ID_Makanan);
+            stmt.setInt(5, Jumlah_Makanan);
+            stmt.setInt(6, Jumlah);
+            stmt.setString(7, metodePembayaran);
+            stmt.setDouble(8,Diskon);
+            stmt.setDouble(9,Harga);
+            stmt.setDouble(10,totalHarga);
+            stmt.executeUpdate();
+            return(true);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return(false);
+    }
+    public static boolean Order( int ID_Order, int Jumlah_Makanan, String ID_Makanan, String Nama, int Jumlah, double Harga,String StatusOrder){
+        conn.connect();
+        String query = "INSERT INTO Order VALUES (?,?,?,?,?,?,?)";
+        try {
+            PreparedStatement stmt = conn.con.prepareStatement(query);
+            stmt.setInt(1, ID_Order);
+            stmt.setString(2, Nama);
+            stmt.setString(3,ID_Makanan );
+            stmt.setInt(4, Jumlah);
+            stmt.setInt(5, Jumlah_Makanan);
+            stmt.setDouble(6,Harga);
+            stmt.setString(7,StatusOrder );   
+            stmt.executeUpdate();
+            return(true);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return(false);
+    }
+    public static boolean Makanan( String ID_Makanan, String Nama, int Jumlah, double Harga){
+        conn.connect();
+        String query = "INSERT INTO Makanan VALUES (?,?,?,?)";
+        try {
+            PreparedStatement stmt = conn.con.prepareStatement(query);
+            stmt.setString(1, ID_Makanan);
+            stmt.setString(2,Nama );
+            stmt.setInt(3, Jumlah);
+            stmt.setDouble(4,Harga);
+            stmt.executeUpdate();
+            return(true);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return(false);
+    }
+    public static boolean Person( String ID_Person,String nama,String Status){
+        conn.connect();
+        String query = "INSERT INTO Person VALUES (?,?,?)";
+        try {
+            PreparedStatement stmt = conn.con.prepareStatement(query);
+            stmt.setString(1, ID_Person);
+            stmt.setString(2, nama);
+            stmt.setString(3, Status);
+            
+            stmt.executeUpdate();
+            return(true);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return(false);
+    }
 }
