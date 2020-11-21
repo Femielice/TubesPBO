@@ -18,6 +18,8 @@ import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JTextField;
+
 
 /**
  *
@@ -34,9 +36,27 @@ public class screenOrderMakanan {
         label.setBounds(180, 50, 300, 30);
         frame.add(label);
         
+        JLabel Jenis_Meja;
+        Jenis_Meja = new JLabel("Jenis_Meja");
+        Jenis_Meja.setBounds(120, 100, 100, 30);
+        frame.add(Jenis_Meja);
+        JTextField Meja;
+        Meja = new JTextField();
+        Meja.setBounds(210, 100, 157, 30);
+        frame.add(Meja);
+        
+        JLabel No_Meja;
+        No_Meja = new JLabel("No_Meja");
+        No_Meja.setBounds(120, 150, 100, 30);
+        frame.add(No_Meja);
+        JTextField No;
+        No = new JTextField();
+        No.setBounds(210, 150, 157, 30);
+        frame.add(No);
+        
         JButton makanan;
         makanan = new JButton("Makanan");
-        makanan.setBounds(100, 100, 100, 30);
+        makanan.setBounds(100, 200, 100, 30);
         makanan.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -52,7 +72,7 @@ public class screenOrderMakanan {
         
         JButton minuman;
         minuman = new JButton("Minuman");
-        minuman.setBounds(100, 170, 100, 30);
+        minuman.setBounds(100, 270, 100, 30);
         minuman.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -70,7 +90,7 @@ public class screenOrderMakanan {
         
         JButton topping;
         topping = new JButton("Topping");
-        topping.setBounds(270, 100, 100, 30);
+        topping.setBounds(270, 200, 100, 30);
         topping.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -87,7 +107,7 @@ public class screenOrderMakanan {
         
         JButton back;
         back = new JButton("Back");
-        back.setBounds(270, 170, 100, 30);
+        back.setBounds(270, 270, 100, 30);
         back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

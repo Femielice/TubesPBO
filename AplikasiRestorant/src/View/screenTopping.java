@@ -14,6 +14,8 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -36,7 +38,7 @@ public class screenTopping {
         label = new JLabel("Menu Topping");
         label.setBounds(200, 50, 300, 30);
         frame.add(label);
-//      Keju       
+   
         JLabel keju;
         keju = new JLabel("Keju");
         keju.setBounds(50, 100, 100, 30);
@@ -49,7 +51,7 @@ public class screenTopping {
         kejuImage = new JButton(new ImageIcon(resizeImage("image/keju.jpg")));
         kejuImage.setBounds(50, 130, 150, 62);
         frame.add(kejuImage);
-//      Telur        
+    
         JLabel telur;
         telur = new JLabel("Telur");
         telur.setBounds(50, 200, 100, 30);
@@ -62,7 +64,7 @@ public class screenTopping {
         telurImage = new JButton(new ImageIcon(resizeImage("image/telur.jpg")));
         telurImage.setBounds(50, 230, 150, 60);
         frame.add(telurImage);
-//      Kimchi       
+     
         JLabel kimchi;
         kimchi = new JLabel("Kimchi");
         kimchi.setBounds(50, 290, 150, 60);
@@ -75,7 +77,7 @@ public class screenTopping {
         kimchiImage = new JButton(new ImageIcon(resizeImage("image/kimchi.jpg")));
         kimchiImage.setBounds(50, 330, 150, 60);
         frame.add(kimchiImage);
-//      Oreo      
+
         JLabel oreo;
         oreo = new JLabel("Oreo");
         oreo.setBounds(280, 100, 100, 30);
@@ -88,7 +90,7 @@ public class screenTopping {
         oreoImage = new JButton(new ImageIcon(resizeImage("image/oreo.jpg")));
         oreoImage.setBounds(280, 130, 150, 60);
         frame.add(oreoImage);
-//      Mayonnaise     
+   
         JLabel mayonnaise;
         mayonnaise = new JLabel("Mayonnaise");
         mayonnaise.setBounds(280, 200, 100, 30);
@@ -101,7 +103,7 @@ public class screenTopping {
         mayonnaiseImage = new JButton(new ImageIcon(resizeImage("image/mayonnaise.jpg")));
         mayonnaiseImage.setBounds(280, 230, 150, 60);
         frame.add(mayonnaiseImage);
-//      Susu        
+     
         JLabel susu;
         susu = new JLabel("Susu");
         susu.setBounds(280, 300, 100, 30);
@@ -120,6 +122,21 @@ public class screenTopping {
         save.setBounds(50, 430, 70, 30);
         frame.add(save);
         
+        JButton update;
+        update = new JButton("Update");
+        update.setBounds(50, 500, 80, 30);
+        update.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                 frame.setVisible(false);
+                try {
+                    new screenTopping();
+                } catch (IOException ex) {
+                    Logger.getLogger(screenTopping.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            } 
+        });
+        frame.add(update);
         JButton back;
         back = new JButton("Back");
         back.setBounds(355, 550, 70, 30);

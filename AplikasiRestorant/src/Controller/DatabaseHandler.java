@@ -18,7 +18,7 @@ import javax.swing.JOptionPane;
 public class DatabaseHandler {
 	public Connection con;
 	private static String driver = "com.mysql.jdbc.Driver";
-	private static String url = "jdbc:mysql://localhost/db_restaurant?serverTimezone=" + TimeZone.getDefault().getID();;
+	private static String url = "jdbc:mysql://localhost/phpmyadmin/db_structure.php?server=1&db=restaurant" ;;
 	private static String username = "root";
 	private static String password = "";
     
