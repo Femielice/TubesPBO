@@ -54,12 +54,8 @@ public class UpdateStock {
         updateminuman.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    frame.setVisible(false);
-                    new screenMinuman();
-                } catch (IOException ex) {
-                    Logger.getLogger(screenOrderMakanan.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                frame.setVisible(false);
+                new UpdateStockMinuman();
                 
             }
             
@@ -72,12 +68,8 @@ public class UpdateStock {
         updatetopping.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    frame.setVisible(false);
-                    new screenTopping();
-                } catch (IOException ex) {
-                    Logger.getLogger(screenOrderMakanan.class.getName()).log(Level.SEVERE, null, ex);
-                }
+                frame.setVisible(false);
+                new UpdateStockTopping();
             }
             
         });
@@ -90,7 +82,7 @@ public class UpdateStock {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.setVisible(false);
-                new screenCustomers();
+                new screenCashier();
             }
         });
         frame.add(back);
