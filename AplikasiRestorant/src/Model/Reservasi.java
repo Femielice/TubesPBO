@@ -62,13 +62,12 @@ public class Reservasi extends Meja{
     public void setNo_Telp(String No_Telp) {
         this.No_Telp = No_Telp;
     }
-    public void getTanggal_Reservasi(){
+    public void setTanggal_Reservasi(String Tanggal_Reservasi){
         this.Tanggal_Reservasi = Tanggal_Reservasi;
     }
-    public String setTanggal_Reservasi(String Tanggal_Reservasi){
+    public String getTanggal_Reservasi(){
         return Tanggal_Reservasi;
     }
-    
     
     
 }
