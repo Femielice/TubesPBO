@@ -95,7 +95,7 @@ public class UpdateStockMakanan {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.setVisible(false);
-                new screenCustomers();
+                new UpdateStock();
             }
             
         });
