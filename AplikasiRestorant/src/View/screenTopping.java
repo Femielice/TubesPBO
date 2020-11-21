@@ -14,6 +14,8 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -120,6 +122,21 @@ public class screenTopping {
         save.setBounds(50, 430, 70, 30);
         frame.add(save);
         
+        JButton update;
+        update = new JButton("Update");
+        update.setBounds(50, 500, 80, 30);
+        update.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                 frame.setVisible(false);
+                try {
+                    new screenTopping();
+                } catch (IOException ex) {
+                    Logger.getLogger(screenTopping.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            } 
+        });
+        frame.add(update);
         JButton back;
         back = new JButton("Back");
         back.setBounds(355, 550, 70, 30);

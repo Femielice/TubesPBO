@@ -66,7 +66,16 @@ public class screenReservasiMeja {
         JButton save;
         save = new JButton("Save");
         save.setBounds(355, 500, 70, 30);
-        frame.add(save);
+        save.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                String nama = Nama.getText();
+                String jumlah_orang = Jumlah.getText();
+                String No_Telpon = No_Telp.getText();
+                String Tgl = Tanggal.getText();
+            }
+        });
+         frame.add(save);
         
         JButton back;
         back = new JButton("Back");

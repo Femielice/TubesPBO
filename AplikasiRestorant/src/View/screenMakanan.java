@@ -131,6 +131,7 @@ public class screenMakanan {
             } 
         });
         frame.add(save);
+
         JButton update;
         update = new JButton("Update");
         update.setBounds(50, 500, 80, 30);
@@ -146,6 +147,7 @@ public class screenMakanan {
             } 
         });
         frame.add(update);
+
         JButton back;
         back = new JButton("Back");
         back.setBounds(355, 550, 70, 30);
