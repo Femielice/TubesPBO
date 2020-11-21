@@ -212,16 +212,15 @@ public class screenStock {
         susuImage.setBounds(500, 570, 150, 60);
         frame.add(susuImage);
         
-         JButton Update_Stock;
+        JButton Update_Stock;
         Update_Stock= new JButton("Update Stock");
-        Update_Stock.setBounds(410, 650, 150, 30);
+        Update_Stock.setBounds(700, 650, 70, 30);
         Update_Stock.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.setVisible(false);
                 new UpdateStock();
             }
-            
         });
         frame.add(Update_Stock);
         
