@@ -219,7 +219,7 @@ public class screenStock {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.setVisible(false);
-                new Screen();
+                new UpdateStock();
             }
             
         });
