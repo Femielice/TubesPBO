@@ -131,7 +131,21 @@ public class screenMakanan {
             } 
         });
         frame.add(save);
-        
+        JButton update;
+        update = new JButton("Update");
+        update.setBounds(50, 500, 80, 30);
+        update.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                 frame.setVisible(false);
+                try {
+                    new screenMakanan();
+                } catch (IOException ex) {
+                    Logger.getLogger(screenMakanan.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            } 
+        });
+        frame.add(update);
         JButton back;
         back = new JButton("Back");
         back.setBounds(355, 550, 70, 30);
