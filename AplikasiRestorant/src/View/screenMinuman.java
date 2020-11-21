@@ -36,7 +36,7 @@ public class screenMinuman {
         label = new JLabel("Menu Minuman");
         label.setBounds(200, 50, 300, 30);
         frame.add(label);
-//      Brown Sugar
+
         JLabel boba ;
         boba = new JLabel("Brown Sugar");
         boba.setBounds(50, 100, 150, 30);
@@ -49,7 +49,7 @@ public class screenMinuman {
         bobaImage = new JButton(new ImageIcon(resizeImage("image/boba.jpg")));
         bobaImage.setBounds(50, 130, 150, 62);
         frame.add(bobaImage);
-//      Matcha
+
         JLabel matcha;
         matcha = new JLabel("Matcha Latte");
         matcha.setBounds(50, 200, 100, 30);
@@ -62,7 +62,7 @@ public class screenMinuman {
         macthaImage = new JButton(new ImageIcon(resizeImage("image/matcha latte.jpg")));
         macthaImage.setBounds(50, 230, 150, 60);
         frame.add(macthaImage);
-//      Ice Lemon       
+
         JLabel iceLemon;
         iceLemon = new JLabel("Lemon Ice Tea");
         iceLemon.setBounds(50, 290, 150, 60);
@@ -75,7 +75,7 @@ public class screenMinuman {
         iceLemonImage = new JButton(new ImageIcon(resizeImage("image/ice lemon.jpg")));
         iceLemonImage.setBounds(50, 330, 150, 60);
         frame.add(iceLemonImage);
-//      Jus Mangga        
+    
         JLabel jusMangga;
         jusMangga = new JLabel("Jus Mangga");
         jusMangga.setBounds(280, 100, 100, 30);
@@ -88,7 +88,7 @@ public class screenMinuman {
         jusManggaImage = new JButton(new ImageIcon(resizeImage("image/Jus mangga.jpg")));
         jusManggaImage.setBounds(280, 130, 150, 60);
         frame.add(jusManggaImage);
-//      Teh        
+ 
         JLabel Teh;
         Teh = new JLabel("Teh");
         Teh.setBounds(280, 200, 150, 30);
@@ -101,7 +101,7 @@ public class screenMinuman {
         TehImage = new JButton(new ImageIcon(resizeImage("image/teh.jpg")));
         TehImage.setBounds(280, 230, 150, 60);
         frame.add(TehImage);
-//      Cappuccino
+
         JLabel Cappuccino;
         Cappuccino = new JLabel("Cappuccino");
         Cappuccino.setBounds(280, 300, 150, 30);
@@ -120,7 +120,7 @@ public class screenMinuman {
         save.setBounds(50, 430, 70, 30);
         frame.add(save);
         
-         JButton update;
+        JButton update;
         update = new JButton("Update");
         update.setBounds(50, 500, 80, 30);
         update.addActionListener(new ActionListener(){
