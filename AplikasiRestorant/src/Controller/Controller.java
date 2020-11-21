@@ -19,6 +19,8 @@ import java.util.ArrayList;
  */
 public class Controller {
     static DatabaseHandler conn = new DatabaseHandler();
+
+    
     
     //SELECT ALL from table stockMakanan
     public ArrayList<stockMakanan> getAllstock(){
