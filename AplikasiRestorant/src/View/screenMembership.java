@@ -5,11 +5,14 @@
  */
 package View;
 
+import Controller.Controller;
+import Model.Membership;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 /**
@@ -85,8 +88,24 @@ public class screenMembership {
         JButton save;
         save = new JButton("Save");
         save.setBounds(355, 500, 70, 30);
+        save.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Membership member = new Membership();
+                member.setID_Member(Member.getText());
+                member.setNama(fieldNama.getText());
+                member.setNo_Telp(fieldNo_Telp.getText());
+                member.setTl(fieldTl.getText());
+                member.setEmail(fieldEmail.getText());
+                member.setTanggal_ExpDate(fieldEXpDate.getText());
+                Controller.Membership(member);
+                if(e.getSource().equals(save)){
+                    JOptionPane.showMessageDialog(null, "Membership telah tersimpan");
+                }
+            }
+        });
         frame.add(save);
-        
+       
         JButton back;
         back = new JButton("Back");
         back.setBounds(355, 550, 70, 30);

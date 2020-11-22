@@ -11,7 +11,7 @@ package Model;
  */
 public class Meja {
     private String ID_Meja;
-    String Jenis_Meja;
+    private String Jenis_Meja;
     private int No_Meja;
     
     public Meja() {

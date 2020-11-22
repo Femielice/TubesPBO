@@ -29,7 +29,7 @@ public class UpdateStockMinuman {
         frame.add(label);
         
         JLabel BrownSugar;
-        BrownSugar = new JLabel("Brown Sugar Bubble Tea");
+        BrownSugar = new JLabel("Brown Sugar");
         BrownSugar.setBounds(120, 100, 100, 30);
         frame.add(BrownSugar);
         JTextField jumlah1;
@@ -56,10 +56,10 @@ public class UpdateStockMinuman {
         frame.add(jumlah3);
         
         
-        JLabel Strawberry;
-        Strawberry = new JLabel("Strawberry Smoothies");
-        Strawberry.setBounds(120, 250, 100, 30);
-        frame.add(Strawberry);
+        JLabel teh;
+        teh = new JLabel("Teh");
+        teh.setBounds(120, 250, 100, 30);
+        frame.add(teh);
         JTextField jumlah4;
         jumlah4 = new JTextField();
         jumlah4.setBounds(210, 250, 157, 30);
@@ -74,10 +74,10 @@ public class UpdateStockMinuman {
         jumlah5.setBounds(210, 300, 157, 30);
         frame.add(jumlah5);
         
-        JLabel Milkshake;
-        Milkshake = new JLabel("Milkshake Chocolate");
-        Milkshake.setBounds(120, 350, 100, 30);
-        frame.add(Milkshake);
+        JLabel cappuccino;
+        cappuccino = new JLabel("cappuccino");
+        cappuccino.setBounds(120, 350, 100, 30);
+        frame.add(cappuccino);
         JTextField jumlah6;
         jumlah6 = new JTextField();
         jumlah6.setBounds(210, 350, 157, 30);
