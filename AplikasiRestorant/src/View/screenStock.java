@@ -135,23 +135,23 @@ public class screenStock {
         jusManggaImage.setBounds(590, 130, 150, 60);
         frame.add(jusManggaImage);
         
-        JLabel smoothies;
-        smoothies = new JLabel("Strawberry Smoothies");
-        smoothies.setBounds(590, 200, 150, 30);
-        frame.add(smoothies);
-        JButton smoothiesImage;
-        smoothiesImage = new JButton(new ImageIcon(resizeImage("image/smoothie.jpg")));
-        smoothiesImage.setBounds(590, 230, 150, 60);
-        frame.add(smoothiesImage);
+        JLabel teh;
+        teh = new JLabel("Teh");
+        teh.setBounds(590, 200, 150, 30);
+        frame.add(teh);
+        JButton tehImage;
+        tehImage = new JButton(new ImageIcon(resizeImage("image/teh.jpg")));
+        tehImage.setBounds(590, 230, 150, 60);
+        frame.add(tehImage);
         
-        JLabel milkshake;
-        milkshake = new JLabel("Milkshake Chocolate");
-        milkshake.setBounds(590, 300, 150, 30);
-        frame.add(milkshake);
-        JButton milkshakeImage;
-        milkshakeImage = new JButton(new ImageIcon(resizeImage("image/milkshake.jpg")));
-        milkshakeImage.setBounds(590, 330, 150, 60);
-        frame.add(milkshakeImage);
+        JLabel Cappuccino ;
+        Cappuccino = new JLabel("Cappuccino");
+        Cappuccino.setBounds(590, 300, 150, 30);
+        frame.add(Cappuccino);
+        JButton CappuccinoImage;
+        CappuccinoImage = new JButton(new ImageIcon(resizeImage("image/Cappuccino.jpg")));
+        CappuccinoImage.setBounds(590, 330, 150, 60);
+        frame.add(CappuccinoImage);
         
          JLabel label3;
         label3 = new JLabel("Menu Topping");
@@ -214,7 +214,7 @@ public class screenStock {
         
         JButton Update_Stock;
         Update_Stock= new JButton("Update Stock");
-        Update_Stock.setBounds(700, 650, 70, 30);
+        Update_Stock.setBounds(450, 650, 150, 30);
         Update_Stock.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
