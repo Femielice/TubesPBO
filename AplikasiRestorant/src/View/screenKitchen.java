@@ -11,5 +11,6 @@ package View;
  */
 public class screenKitchen {
     public screenKitchen(){
+       new  screenOrderanCustomer();
     }
 }

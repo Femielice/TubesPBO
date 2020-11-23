@@ -26,7 +26,6 @@ public class screenOrderanCustomer {
     public screenOrderanCustomer() {
         JFrame frame = new JFrame("Orderan Customer");
         frame.setSize(500, 700);
-        frame.setLocationRelativeTo(null);
-    
+        frame.setLocationRelativeTo(null);   
 }
 }
