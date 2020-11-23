@@ -48,7 +48,7 @@ public class screenTransaksi {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.setVisible(false);
-                new screenCustomers();
+                new screenCashier();
             }
         });
         frame.add(back);
