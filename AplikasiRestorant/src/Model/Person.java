@@ -5,7 +5,6 @@
  */
 package Model;
 
-import Controller.StatusEnum;
 
 /**
  *
@@ -14,7 +13,6 @@ import Controller.StatusEnum;
 public class Person {
     private String ID_Person;
     private String Nama;
-    private StatusEnum person;
     
     public Person() {
     }
@@ -27,20 +25,11 @@ public class Person {
         this.Nama = Nama;
     }
 
-    public void setPerson(StatusEnum person) {
-        this.person = person;
-    }
-
     public String getID_Person() {
         return ID_Person;
     }
 
     public String getNama() {
         return Nama;
-    }
-
-    public StatusEnum getPerson() {
-        return person;
-    }
-    
+    }  
 }
