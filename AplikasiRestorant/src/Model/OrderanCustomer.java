@@ -10,9 +10,9 @@ package Model;
  * @author willi
  */
 public class OrderanCustomer {
-    String ID_orderanCust;
-    String ID_Makanan;
-    String ID_Minuman;
+    private String ID_orderanCust;
+    private String ID_Makanan;
+    private String ID_Minuman;
     
     
     public OrderanCustomer(){
