@@ -49,7 +49,7 @@ public class Screen extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.setVisible(false);
-                new screenCustomers();
+                new ScreenCustomers();
             }
             
         });
@@ -64,7 +64,7 @@ public class Screen extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.setVisible(false);
-                new screenCashier();
+                new ScreenCashier();
             }
             
         });
@@ -94,7 +94,7 @@ public class Screen extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.setVisible(false);
-                new screenKitchen();
+                new ScreenKitchen();
             }    
         });
         frame.add(kitchen);

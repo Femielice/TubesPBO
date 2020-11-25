@@ -10,73 +10,61 @@ package Model;
  * @author A442UF
  */
 public class Membership {
-    String ID_Member;
-    private String Nama;
-    private String Tl;
-    private String Email;
-    private String No_Telp;
-    String Tanggal_ExpDate;
+    private String id_member;
+    private String nama;
+    private String tanggallahir;
+    private String email;
+    private String no_telp;
+    private String expdate;
     
     public Membership() {
     }
 
-    public Membership(String ID_Member, String Nama, String Tl, String Email, String No_Telp, String Tanggal_ExpDate) {
-        this.ID_Member = ID_Member;
-        this.Nama = Nama;
-        this.Tl = Tl;
-        this.Email = Email;
-        this.No_Telp = No_Telp;
-        this.Tanggal_ExpDate = Tanggal_ExpDate;
-    }
-    
-    
-    public String getID_Member() {
-        return ID_Member;
+    public String getId_member() {
+        return id_member;
     }
 
-    public void setID_Member(String ID_Member) {
-        this.ID_Member = ID_Member;
+    public void setId_member(String id_member) {
+        this.id_member = id_member;
     }
 
     public String getNama() {
-        return Nama;
+        return nama;
     }
 
-    public void setNama(String Nama) {
-        this.Nama = Nama;
+    public void setNama(String nama) {
+        this.nama = nama;
     }
 
-    public String getTl() {
-        return Tl;
+    public String getTanggallahir() {
+        return tanggallahir;
     }
 
-    public void setTl(String Tl) {
-        this.Tl = Tl;
+    public void setTanggallahir(String tanggallahir) {
+        this.tanggallahir = tanggallahir;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
-    public void setEmail(String Email) {
-        this.Email = Email;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getNo_Telp() {
-        return No_Telp;
+    public String getNo_telp() {
+        return no_telp;
     }
 
-    public void setNo_Telp(String No_Telp) {
-        this.No_Telp = No_Telp;
+    public void setNo_telp(String no_telp) {
+        this.no_telp = no_telp;
     }
 
-    public String getTanggal_ExpDate() {
-        return Tanggal_ExpDate;
+    public String getExpdate() {
+        return expdate;
     }
 
-    public void setTanggal_ExpDate(String Tanggal_ExpDate) {
-        this.Tanggal_ExpDate = Tanggal_ExpDate;
+    public void setExpdate(String expdate) {
+        this.expdate = expdate;
     }
-    
-    
 }

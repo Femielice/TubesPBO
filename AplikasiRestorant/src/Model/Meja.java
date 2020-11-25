@@ -5,46 +5,54 @@
  */
 package Model;
 
+import Controller.Controller;
+import java.util.ArrayList;
+
 /**
  *
  * @author A442UF
  */
 public class Meja {
-    private String ID_Meja;
-    private String Jenis_Meja;
-    private int No_Meja;
+    private String id_meja;
+    private String jenis_meja;
+    private int no_meja;
     
-    public Meja() {
-    }
-
-    public Meja(String ID_Meja, String Jenis_Meja, int No_Meja) {
-        this.ID_Meja = ID_Meja;
-        this.Jenis_Meja = Jenis_Meja;
-        this.No_Meja = No_Meja;
-    }
-
-    public String getID_Meja() {
-        return ID_Meja;
-    }
-
-    public void setID_Meja(String ID_Meja) {
-        this.ID_Meja = ID_Meja;
-    }
-
-    public String getJenis_Meja() {
-        return Jenis_Meja;
-    }
-
-    public void setJenis_Meja(String Jenis_Meja) {
-        this.Jenis_Meja = Jenis_Meja;
-    }
-
-    public int getNo_Meja() {
-        return No_Meja;
-    }
-
-    public void setNo_Meja(int No_Meja) {
-        this.No_Meja = No_Meja;
-    }
+    public Meja(){
     
+    }
+
+    public Meja(String id_meja, String jenis_meja, int no_meja) {
+        this.id_meja = id_meja;
+        this.jenis_meja = jenis_meja;
+        this.no_meja = no_meja;
+    }
+
+    public String getId_meja() {
+        return id_meja;
+    }
+
+    public void setId_meja(String id_meja) {
+        this.id_meja = id_meja;
+    }
+
+    public String getJenis_meja() {
+        return jenis_meja;
+    }
+
+    public void setJenis_meja(String jenis_meja) {
+        this.jenis_meja = jenis_meja;
+    }
+
+    public int getNo_meja() {
+        return no_meja;
+    }
+
+    public void setNo_meja(int no_meja) {
+        this.no_meja = no_meja;
+    }
+
+    @Override
+    public String toString() {
+        return id_meja;
+    }
 }

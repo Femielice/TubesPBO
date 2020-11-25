@@ -10,8 +10,6 @@ import Model.Membership;
 import Model.Order;
 import Model.Person;
 import Model.Reservasi;
-import Model.stockMakanan;
-import View.screenMembership;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -20,6 +18,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 
 /**
  *
@@ -28,17 +27,17 @@ import javax.swing.JButton;
 public class Controller {
     static DatabaseHandler conn = new DatabaseHandler();
     
-    public static boolean Reservasi(Reservasi nreservasi){
+    public static boolean InsertReservasi(Reservasi nreservasi){
         conn.connect();
         String query = "INSERT INTO reservasi VALUES (?,?,?,?,?,?)";
         try{
             PreparedStatement stmt = conn.con.prepareStatement(query);
-            stmt.setString(1, nreservasi.getID());
+            stmt.setString(1, nreservasi.getId());
             stmt.setString(2, nreservasi.getNama());
-            stmt.setString(3, nreservasi.getTanggal_Reservasi());
-            stmt.setInt(4, nreservasi.getJumlahOrang());
-            stmt.setString(5, nreservasi.getNo_Telp());
-            stmt.setString(6, nreservasi.getID_Meja());
+            stmt.setString(3, nreservasi.getTanggalreservasi());
+            stmt.setString(4, nreservasi.getJumlahorang());
+            stmt.setString(5, nreservasi.getNotelp());
+            stmt.setString(6, nreservasi.getId_meja());
             stmt.executeUpdate();
             return(true);
         } catch (SQLException ex) {
@@ -47,17 +46,17 @@ public class Controller {
         }
     }
     
-    public static boolean Membership(Membership member){
+    public static boolean InsertMembership(Membership member){
         conn.connect();
         String query = "INSERT INTO members VALUES (?,?,?,?,?,?)";
         try {
             PreparedStatement stmt = conn.con.prepareStatement(query);
-            stmt.setString(1, member.getID_Member());
+            stmt.setString(1, member.getId_member());
             stmt.setString(2, member.getNama());
-            stmt.setString(3, member.getNo_Telp());
-            stmt.setString(4, member.getTl());
+            stmt.setString(3, member.getNo_telp());
+            stmt.setString(4, member.getTanggallahir());
             stmt.setString(5, member.getEmail());
-            stmt.setString(6, member.getTanggal_ExpDate());
+            stmt.setString(6, member.getExpdate());
             stmt.executeUpdate();
             return(true);
         } catch (SQLException e) {
@@ -66,12 +65,12 @@ public class Controller {
         return(false);
     }
     
-    public static boolean Person(Person persons){
+    public static boolean InsertPerson(Person persons){
         conn.connect();
         String query = "INSERT INTO person VALUES (?,?)";
         try {
             PreparedStatement stmt = conn.con.prepareStatement(query);
-            stmt.setString(1, persons.getID_Person());
+            stmt.setString(1, persons.getId_person());
             stmt.setString(2, persons.getNama());
             stmt.executeUpdate();
             return(true);
@@ -81,13 +80,14 @@ public class Controller {
         return(false);
     }
     
-    public static boolean insertOrder(Order order){
+        public static boolean InsertOrder(Order order){
         conn.connect();
-        String query = "INSERT INTO orders VALUES (?,?)";
+        String query = "INSERT INTO orders VALUES (?,?,?)";
         try {
             PreparedStatement stmt = conn.con.prepareStatement(query);
-            stmt.setInt(1, order.getJumlah_Makanan());
-            stmt.setInt(1, order.getJumlah_Makanan());
+            stmt.setInt(1, order.getId_order());
+            stmt.setInt(2, order.getJumlah_makanan());
+            stmt.setString(3, order.getId_makanan());
             stmt.executeUpdate();
             return(true);
         } catch (SQLException ex) {
@@ -95,25 +95,11 @@ public class Controller {
             return(false);
         } 
     }
-        
-    public static Person getPerson(String ID_person){
-        conn.connect();
-        String query = "SELECT * FROM person WHERE ID_person = '" + ID_person + "'";
-        Person person = new Person();
-        try{
-            Statement stmt = conn.con.createStatement();
-            ResultSet rs = stmt.executeQuery(query);
-            while(rs.next()){
-                person.setID_Person(ID_person);
-            }
-        } catch (SQLException ex) {
-            ex.printStackTrace();
-        }
-        return(person);
-    }
     
-    //SELECT ALL from table meja
-    public static ArrayList<Meja> getAllMeja(){
+    
+    
+        //SELECT ALL from table meja
+    public static ArrayList<Meja> getMeja(){
        ArrayList<Meja> meja = new ArrayList<>();
        conn.connect();
        String query = "SELECT * FROM meja";
@@ -122,7 +108,9 @@ public class Controller {
            ResultSet rs = stmt.executeQuery(query);
            while(rs.next()){
                Meja new_meja = new Meja();
-               new_meja.setID_Meja(rs.getString("ID_meja"));
+               new_meja.setId_meja(rs.getString("ID_meja"));
+               meja.add(new_meja);
+
            }
        } catch (SQLException ex) {
             ex.printStackTrace();
@@ -131,27 +119,50 @@ public class Controller {
     }
     
     
-    //SELECT ALL from table stockMakanan
-    public ArrayList<stockMakanan> getAllstock(){
-        ArrayList<stockMakanan> stockmakanan = new ArrayList<>();
-        conn.connect();
-        String query = "SELECT * FROM stockmakanan";
-        try{
-            Statement stmt = conn.con.createStatement();
-            ResultSet rs = stmt.executeQuery(query);
-            while(rs.next()){
-                stockMakanan Stock = new stockMakanan();
-                Stock.setID_Makanan(rs.getString("ID_Makanan"));
-                Stock.setNama(rs.getString("Nama"));
-                Stock.setJumlah(rs.getInt("Jumlah"));
-                Stock.setHarga(rs.getInt("Harga"));
-                stockmakanan.add(Stock);
-            }
-        }catch(SQLException e){
-            e.printStackTrace();
-        }
-        return(stockmakanan);
-    }
+//        
+//    public static Person getPerson(String ID_person){
+//        conn.connect();
+//        String query = "SELECT * FROM person WHERE ID_person = '" + ID_person + "'";
+//        Person person = new Person();
+//        try{
+//            Statement stmt = conn.con.createStatement();
+//            ResultSet rs = stmt.executeQuery(query);
+//            while(rs.next()){
+//                person.setID_Person(ID_person);
+//            }
+//        } catch (SQLException ex) {
+//            ex.printStackTrace();
+//        }
+//        return(person);
+//    }
+//    
+//
+//    public static void Reservasi(Reservasi new_reservasi) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
+//    
+//    
+//    //SELECT ALL from table stockMakanan
+//    public ArrayList<StockMakanan> getAllstock(){
+//        ArrayList<StockMakanan> stockmakanan = new ArrayList<>();
+//        conn.connect();
+//        String query = "SELECT * FROM stockmakanan";
+//        try{
+//            Statement stmt = conn.con.createStatement();
+//            ResultSet rs = stmt.executeQuery(query);
+//            while(rs.next()){
+//                StockMakanan Stock = new StockMakanan();
+//                Stock.setID_Makanan(rs.getString("ID_Makanan"));
+//                Stock.setNama(rs.getString("Nama"));
+//                Stock.setJumlah(rs.getInt("Jumlah"));
+//                Stock.setHarga(rs.getInt("Harga"));
+//                stockmakanan.add(Stock);
+//            }
+//        }catch(SQLException e){
+//            e.printStackTrace();
+//        }
+//        return(stockmakanan);
+//    }
 //     public static boolean Meja( String ID_Meja,String Jenis_Meja,int No_Meja){
 //        conn.connect();
 //        String query = "INSERT INTO Meja VALUES (?,?,?,?,?,?)";
@@ -224,4 +235,6 @@ public class Controller {
 //        }
 //        return(false);
 //    }
+
+    
 }

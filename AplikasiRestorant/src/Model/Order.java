@@ -9,42 +9,41 @@ package Model;
  *
  * @author A442UF
  */
-public class Order extends stockMakanan {
-    int ID_Order;
-    int Jumlah_Makanan;
+public class Order {
+    private int id_order;
+    private int jumlah_makanan;
+    private String id_makanan;
     
     public Order(){
     }
 
-    public Order(int ID_Order, int Jumlah_Makanan, String ID_Makanan, String Nama, int Jumlah, double Harga) {
-        super(ID_Makanan, Nama, Jumlah, Harga);
-        this.ID_Order = ID_Order;
-        this.Jumlah_Makanan = Jumlah_Makanan;
-    }
-    
-    
-    public int getID_Order() {
-        return ID_Order;
+    public Order(int id_order, int jumlah_makanan, String id_makanan) {
+        this.id_order = id_order;
+        this.jumlah_makanan = jumlah_makanan;
+        this.id_makanan = id_makanan;
     }
 
-    public void setID_Order(int ID_Order) {
-        this.ID_Order = ID_Order;
+    public int getId_order() {
+        return id_order;
     }
 
-    public int getJumlah_Makanan() {
-        return Jumlah_Makanan;
+    public void setId_order(int id_order) {
+        this.id_order = id_order;
     }
 
-    public void setJumlah_Makanan(int Jumlah_Makanan) {
-        this.Jumlah_Makanan = Jumlah_Makanan;
+    public int getJumlah_makanan() {
+        return jumlah_makanan;
     }
 
-    public String getID_Makanan() {
-        return ID_Makanan;
+    public void setJumlah_makanan(int jumlah_makanan) {
+        this.jumlah_makanan = jumlah_makanan;
     }
 
-    public void setID_Makanan(String ID_Makanan) {
-        this.ID_Makanan = ID_Makanan;
+    public String getId_makanan() {
+        return id_makanan;
     }
 
+    public void setId_makanan(String id_makanan) {
+        this.id_makanan = id_makanan;
+    }
 }
