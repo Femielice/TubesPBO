@@ -12,68 +12,63 @@ import Model.Meja;
  * @author A442UF
  */
 public class Reservasi extends Meja{
-    private String ID;
-    private String Nama;
-    int JumlahOrang;
-    private String No_Telp;
-    private String Tanggal_Reservasi;
+    private String id;
+    private String nama;
+    private String jumlahorang;
+    private String notelp;
+    private String tanggalreservasi;
    
     public Reservasi() {
         
     }
 
-    public Reservasi(String ID, String Nama, int JumlahOrang, String No_Telp, String Tanggal_Reservasi, String ID_Meja, String Jenis_Meja, int No_Meja) {
-        super(ID_Meja, Jenis_Meja, No_Meja);
-        this.ID = ID;
-        this.Nama = Nama;
-        this.JumlahOrang = JumlahOrang;
-        this.No_Telp = No_Telp;
-        this.Tanggal_Reservasi = Tanggal_Reservasi;
+    public Reservasi(String id, String nama, String jumlahorang, String notelp, String tanggalreservasi, String id_meja, String jenis_meja, int no_meja) {
+        super(id_meja, jenis_meja, no_meja);
+        this.id = id;
+        this.nama = nama;
+        this.jumlahorang = jumlahorang;
+        this.notelp = notelp;
+        this.tanggalreservasi = tanggalreservasi;
     }
 
-    public String getID() {
-        return ID;
+    public String getId() {
+        return id;
     }
 
-    public void setID(String ID) {
-        this.ID = ID;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getNama() {
-        return Nama;
+        return nama;
     }
 
-    public void setNama(String Nama) {
-        this.Nama = Nama;
+    public void setNama(String nama) {
+        this.nama = nama;
     }
 
-    public int getJumlahOrang() {
-        return JumlahOrang;
+    public String getJumlahorang() {
+        return jumlahorang;
     }
 
-    public void setJumlahOrang(int JumlahOrang) {
-        this.JumlahOrang = JumlahOrang;
+    public void setJumlahorang(String jumlahorang) {
+        this.jumlahorang = jumlahorang;
     }
 
-    public String getNo_Telp() {
-        return No_Telp;
+    public String getNotelp() {
+        return notelp;
     }
 
-    public void setNo_Telp(String No_Telp) {
-        this.No_Telp = No_Telp;
+    public void setNotelp(String notelp) {
+        this.notelp = notelp;
     }
 
-    public String getTanggal_Reservasi() {
-        return Tanggal_Reservasi;
+    public String getTanggalreservasi() {
+        return tanggalreservasi;
     }
 
-    public void setTanggal_Reservasi(String Tanggal_Reservasi) {
-        this.Tanggal_Reservasi = Tanggal_Reservasi;
+    public void setTanggalreservasi(String tanggalreservasi) {
+        this.tanggalreservasi = tanggalreservasi;
     }
-    
-   
-
-   
-    
     
 }
