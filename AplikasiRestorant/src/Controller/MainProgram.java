@@ -5,7 +5,7 @@
  */
 package Controller;
 
-import Model.stockMakanan;
+import Model.StockMakanan;
 import View.Screen;
 import java.awt.Graphics;
 import java.awt.Image;
