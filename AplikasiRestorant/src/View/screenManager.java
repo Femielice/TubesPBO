@@ -7,6 +7,7 @@ package View;
 
 import Controller.Controller;
 import Model.Person;
+import View.Manager.ShowPendapatan;
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -60,10 +61,10 @@ public class screenManager extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 Person p = new Person();
                 if(e.getSource().equals(input)){
-                    Controller.Person(p);
-                    if(fieldID.getText().equals(p.getID_Person())){
+                    Controller.InsertPerson(p);
+                    if(fieldID.getText().equals(p.getId_person())){
                             JOptionPane.showMessageDialog(null, "Silahkan Masuk");
-                            new screenPendapatan();
+                            new ShowPendapatan();
                             frame.setVisible(false);
                     } else {
                             JOptionPane.showMessageDialog(null, "Data yang Tidak ada");
@@ -79,12 +80,12 @@ public class screenManager extends JFrame{
         signUP.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e) {
                 Person p = new Person();
-                p.setID_Person(fieldID.getText());
+                p.setId_person(fieldID.getText());
                 p.setNama(fieldNama.getText());
-                Controller.Person(p);
+                Controller.InsertPerson(p);
                 if(e.getSource().equals(signUP)){
                     JOptionPane.showMessageDialog(null, "Data telah tersimpan");
-                     new screenPendapatan();
+                     new ShowPendapatan();
                      frame.setVisible(false);
                 }
             }
