@@ -11,25 +11,25 @@ package Model;
  * @author A442UF
  */
 public class Person {
-    private String ID_Person;
-    private String Nama;
+    private String id_person;
+    private String nama;
     
     public Person() {
     }
 
-    public void setID_Person(String ID_Person) {
-        this.ID_Person = ID_Person;
+    public String getId_person() {
+        return id_person;
     }
 
-    public void setNama(String Nama) {
-        this.Nama = Nama;
-    }
-
-    public String getID_Person() {
-        return ID_Person;
+    public void setId_person(String id_person) {
+        this.id_person = id_person;
     }
 
     public String getNama() {
-        return Nama;
-    }  
+        return nama;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
 }
